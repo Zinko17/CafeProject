@@ -1,0 +1,10 @@
+{% for m in meal %}
+    <h1>{{category.title}}</h1>
+    <img src="{{m.photo.url}}" height="252" width="252">
+    <p>Блюдо:{{m.title}}</p>
+    <p>Цена:{{m.price}}</p>
+    <p>Порция:{{m.gramms}}г.</p>
+    <p>Ингридиенты:{{m.ingredients}}</p>
+    <p>Категория:{{m.category}}</p><br>
+
+{% endfor %}
