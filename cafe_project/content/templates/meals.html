@@ -1,11 +1,12 @@
+<h1>All meals</h1>
 {% for m in meal %}
     <img src="{{m.photo.url}}" height="252" width="252">
     <p>Блюдо:{{m.title}}</p>
     <p>Цена:{{m.price}}</p>
     <p>Порция:{{m.gramms}}г.</p>
     <p>Ингридиенты:{{m.ingredients}}</p>
-    <p>Категория:{{m.category}}</p><br>
-
+    <p>Категория:{{m.category}}</p>
+    <a href="{% url 'order' %}">Заказать!</a><br>
 
 
 {% endfor %}
