@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from content.models import Meal
 
@@ -8,7 +9,7 @@ class Order(models.Model):
         ('in_process', 'in_process'),
         ('closed', 'closed'),
     ),default='in_process')
-
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
 
 class Bill(models.Model):
     order = models.OneToOneField(Order,on_delete=models.SET_NULL,null=True)
