@@ -11,14 +11,16 @@ class Order(models.Model):
     ),default='in_process')
     user = models.ForeignKey(User,on_delete=models.CASCADE)
 
+
 class Bill(models.Model):
     order = models.OneToOneField(Order,on_delete=models.SET_NULL,null=True)
     client_money = models.IntegerField(default=0)
     payback = models.IntegerField(default=0)
+    date_created = models.DateTimeField(auto_now_add=True)
 
 
 
 class MealToOrder(models.Model):
     meal = models.ForeignKey(Meal,on_delete=models.SET_NULL,null=True)
-    order = models.ForeignKey(Order,on_delete=models.SET_NULL,null=True)
+    order = models.ForeignKey(Order,on_delete=models.SET_NULL,null=True,related_name='mto')
     quantity = models.IntegerField(default=0)
