@@ -1,7 +1,7 @@
 <h1>{{category.title}}</h1>
 {% for m in meal %}
     <img src="{{m.photo.url}}" height="252" width="252">
-    <p>Блюдо:{{m.title}}</p>
+    <p><a href="{% url 'meal_detail' m.id %}">{{m.title}}</a></p>
     <p>Цена:{{m.price}}</p>
     <p>Порция:{{m.gramms}}г.</p>
     <p>Ингридиенты:{{m.ingredients}}</p>
