@@ -1,0 +1,11 @@
+<header><h1>Мои заказы</h1></header>
+<hr>
+{% for o in order %}
+<p>Пользователь:{{o.user}}</p>
+<p>Полная сумма:{{o.total_sum}}</p>
+<p>Статус заказа:{{o.status}}</p>
+<p>Дата создания заказа:{{o.date_created}}
+{% for m in mto %}
+    <p>ОбЪекты заказа:{{m.meal}}</p><br><hr>
+{% endfor %}
+{% endfor %}
