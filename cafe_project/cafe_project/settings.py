@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'content',
     'bill_order',
+    'review',
 ]
 
 MIDDLEWARE = [
