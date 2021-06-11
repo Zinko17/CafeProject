@@ -9,7 +9,7 @@ admin.site.register(Order,OrderAdmin)
 
 
 class BillAdmin(admin.ModelAdmin):
-    list_display = ['order','client_money','payback']
+    list_display = ['order','client_money','payback','date_created']
 
 admin.site.register(Bill,BillAdmin)
 
