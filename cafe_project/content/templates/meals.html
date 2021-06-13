@@ -1,12 +1,14 @@
 <h1>All meals</h1>
+<h2><p align="right"><a href="{% url 'home' %}">Go homepage</a></p></h2>
+<hr>
 {% for m in meal %}
-    <img src="{{m.photo.url}}" height="252" width="252">
-    <p>Блюдо:{{m.title}}</p>
-    <p>Цена:{{m.price}}</p>
-    <p>Порция:{{m.gramms}}г.</p>
-    <p>Ингридиенты:{{m.ingredients}}</p>
-    <p>Категория:{{m.category}}</p>
-    <a href="{% url 'order' %}">Заказать!</a><br>
+<p align="center"><img src="{{m.photo.url}}" height="252" width="252"></p>
+    <p align="center">Блюдо:{{m.title}}</p>
+    <p align="center">>Цена:{{m.price}}</p>
+    <p align="center">>Порция:{{m.gramms}}г.</p>
+    <p align="center">>Ингридиенты:{{m.ingredients}}</p>
+    <p align="center">>Категория:{{m.category}}</p>
+    <p align="center">><a href="{% url 'order' %}">Заказать!</a><br></p>
 
 
 {% endfor %}
