@@ -1,5 +1,8 @@
+<h1>Страница заказа</h1>
+<h2><p align="right"><a href="{% url 'home' %}">Go homepage</a></p></h2>
+<hr>
 <form method="POST" action="">
     {% csrf_token %}
-    {{form}}<br>
+    <p align="left">{{form}}</p>
     <input type="submit">
 </form>
