@@ -1,6 +1,8 @@
 <header><h1>Мои заказы</h1></header>
+<h2><p align="right"><a href="{% url 'home' %}">Go homepage</a></p></h2>
 <hr>
 {% for o in order %}
+<p align="right"><a href="{% url 'close_check' o.id %}">Go close your check</a></p>
 <p>Пользователь:{{o.user}}</p>
 <p>Полная сумма:{{o.total_sum}}</p>
 <p>Статус заказа:{{o.status}}</p>
