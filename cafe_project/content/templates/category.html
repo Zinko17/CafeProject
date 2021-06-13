@@ -1,3 +1,7 @@
+<h1>Главная страница</h1>
+<h2><p align="right"><a href="{% url 'meals' %}">Go to check all meals!</a></p></h2>
+<hr>
 {% for c in category %}
-<a href="{% url 'detail' c.id %}">{{c.title}}<br></a>
+
+<h2><p align="center"><a href="{% url 'detail' c.id %}">{{c.title}}<br></a></p></h2>
 {% endfor %}
